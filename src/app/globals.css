@@ -109,3 +109,133 @@ body::before {
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+
+/* Blog prose styling */
+.prose-custom {
+  color: var(--color-foreground);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.prose-custom h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+  color: var(--color-foreground);
+}
+
+.prose-custom h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-foreground);
+}
+
+.prose-custom p {
+  margin-bottom: 1.25rem;
+  color: var(--color-muted);
+}
+
+.prose-custom strong {
+  color: var(--color-foreground);
+  font-weight: 600;
+}
+
+.prose-custom a {
+  color: var(--color-accent-light);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-custom a:hover {
+  color: var(--color-accent);
+}
+
+.prose-custom ul,
+.prose-custom ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+  color: var(--color-muted);
+}
+
+.prose-custom li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-custom ol {
+  list-style-type: decimal;
+}
+
+.prose-custom ul {
+  list-style-type: disc;
+}
+
+.prose-custom blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.prose-custom code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.875em;
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--color-accent-light);
+}
+
+.prose-custom pre {
+  background: var(--color-card);
+  border: 1px solid var(--color-border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+
+.prose-custom pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--color-foreground);
+}
+
+.prose-custom table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.prose-custom th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid var(--color-border);
+  font-weight: 600;
+  color: var(--color-foreground);
+}
+
+.prose-custom td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-muted);
+}
+
+.prose-custom hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2rem 0;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

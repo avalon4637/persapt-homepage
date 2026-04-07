@@ -210,6 +210,14 @@ const translations: Translations = {
     ko: "기존 도구는 단순 메모리 저장/검색에 국한. 능동적 행동을 위한 Policy Memory 기술의 부재.",
   },
 
+  // Blog
+  "blog.label": { en: "Engineering Blog", ko: "기술 블로그" },
+  "blog.title": { en: "Blog", ko: "블로그" },
+  "blog.subtitle": {
+    en: "Insights on AI agents, autonomous operations, and the path from SaaS to AaaS.",
+    ko: "AI 에이전트, 자율 운영, 그리고 SaaS에서 AaaS로의 여정에 대한 인사이트.",
+  },
+
   // Footer
   "footer.tagline": {
     en: "Personalize + Adapt",

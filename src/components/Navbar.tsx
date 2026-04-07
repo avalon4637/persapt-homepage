@@ -10,6 +10,7 @@ const navLinks = [
   { key: "nav.products", href: "#products" },
   { key: "nav.technology", href: "#technology" },
   { key: "nav.whynow", href: "#whynow" },
+  { key: "nav.blog", href: "/blog" },
   { key: "nav.contact", href: "#contact" },
 ];
 

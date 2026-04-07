@@ -35,7 +35,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><a href="#about" className="text-sm text-muted hover:text-foreground transition-colors">{t("footer.about")}</a></li>
               <ComingSoon label={t("footer.team")} />
-              <ComingSoon label={t("footer.blog")} />
+              <li><a href="/blog" className="text-sm text-muted hover:text-foreground transition-colors">{t("footer.blog")}</a></li>
               <ComingSoon label={t("nav.careers")} />
             </ul>
           </div>
