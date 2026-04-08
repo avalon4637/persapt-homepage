@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import Link from "next/link";
 import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
 import { I18nProvider, useI18n } from "@/lib/i18n";
 import Navbar from "@/components/Navbar";
@@ -31,16 +32,20 @@ function PostContent({ post }: { post: BlogPost }) {
 
         <div className="relative z-10 mx-auto max-w-3xl px-6">
           {/* Back link */}
-          <motion.a
-            href="/blog"
+          <motion.div
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3 }}
-            className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors mb-10"
+            className="mb-10"
           >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Blog
-          </motion.a>
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-sm text-muted hover:text-foreground transition-colors"
+            >
+              <ArrowLeft className="w-4 h-4" />
+              Back to Blog
+            </Link>
+          </motion.div>
 
           {/* Post header */}
           <motion.header
@@ -121,12 +126,12 @@ function PostContent({ post }: { post: BlogPost }) {
                   ? "얼리 액세스 프로그램에 참여하고 자율 AI 운영을 가장 먼저 경험하세요."
                   : "Get early access and be among the first to experience autonomous AI operations."}
               </p>
-              <a
+              <Link
                 href="/#contact"
                 className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-accent text-white text-sm font-medium hover:bg-accent-light transition-all duration-300"
               >
                 {lang === "ko" ? "얼리 액세스 신청" : "Get Early Access"}
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

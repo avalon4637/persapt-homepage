@@ -1,17 +1,18 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Globe } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
 const navLinks = [
-  { key: "nav.about", href: "#about" },
-  { key: "nav.products", href: "#products" },
-  { key: "nav.technology", href: "#technology" },
-  { key: "nav.whynow", href: "#whynow" },
+  { key: "nav.about", href: "/#about" },
+  { key: "nav.products", href: "/#products" },
+  { key: "nav.technology", href: "/#technology" },
+  { key: "nav.whynow", href: "/#whynow" },
   { key: "nav.blog", href: "/blog" },
-  { key: "nav.contact", href: "#contact" },
+  { key: "nav.contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
@@ -39,25 +40,25 @@ export default function Navbar() {
       >
         <div className="mx-auto max-w-7xl px-6 flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-2">
             <span className="text-xl font-bold tracking-tight text-foreground">
               Persapt
             </span>
             <span className="hidden sm:inline text-xs text-muted font-mono mt-0.5">
               / AaaS
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.key}
                 href={link.href}
                 className="text-sm text-muted hover:text-foreground transition-colors duration-200"
               >
                 {t(link.key)}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -73,12 +74,12 @@ export default function Navbar() {
             </button>
 
             {/* CTA */}
-            <a
-              href="#contact"
+            <Link
+              href="/#contact"
               className="hidden md:inline-flex px-4 py-2 rounded-full text-sm font-medium bg-accent text-white hover:bg-accent-light transition-colors duration-200"
             >
               {t("hero.cta1")}
-            </a>
+            </Link>
 
             {/* Mobile menu button */}
             <button
@@ -104,22 +105,22 @@ export default function Navbar() {
           >
             <div className="flex flex-col items-center gap-8 pt-12">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.key}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
                   className="text-lg text-muted hover:text-foreground transition-colors"
                 >
                   {t(link.key)}
-                </a>
+                </Link>
               ))}
-              <a
-                href="#contact"
+              <Link
+                href="/#contact"
                 onClick={() => setMobileOpen(false)}
                 className="mt-4 px-8 py-3 rounded-full text-sm font-medium bg-accent text-white hover:bg-accent-light active:scale-95 transition-all duration-200"
               >
                 {t("hero.cta1")}
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}
